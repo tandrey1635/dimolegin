@@ -1,0 +1,139 @@
+@use '../base/index' as *
+
+.header
+	position: relative
+	margin: 72px 0
+	min-height: 77px
+	@media ( max-width: 480px )
+		margin: 64px 0
+	@media ( max-width: 425px )
+		margin: 64px 0 32px 0
+		min-height: auto
+	&__container
+		padding: 0!important
+		@media ( max-width: 1350px )
+			padding: 0 15px!important
+	&__wrapper, &__nav, &__menu, &__list
+		min-height: inherit
+	&__wrapper, &__menu
+		@include flexCenter(space-between)
+	&__wrapper
+		border: 3px solid $mainBorder
+		border-radius: 25px
+		box-shadow: 1px 3px 7px 0 $mainShadow
+		@media ( max-width: 1750px )
+			max-width: 1160px
+		@media ( max-width: 1350px )
+			max-width: 100%
+			margin: 0 auto
+		@media ( max-width: 991px )
+			border-radius: 15px
+			position: relative
+	&__nav
+		width: 100%
+		@media ( max-width: 991px )
+			width: 115%
+			@include absolute(-9999px, -5%)
+			background: $mainBg
+			height: 100dvh
+			transition: 1.2s
+			z-index: 10
+		&_active
+			transition: 1.2s
+			top: 74px
+			@media ( max-width: 425px )
+				top: 54px
+	&__menu
+		@media ( max-width: 991px )
+			flex-direction: column
+			justify-content: center
+			gap: 32px
+			height: 80%
+		@media ( max-width: 425px )
+			align-items: flex-start
+			padding-left: 20px
+	&__link
+		position: relative
+		padding: 19px 40px
+		font-weight: 700
+		font-size: 24px
+		line-height: 160%
+		text-transform: uppercase
+		color: $secondColor
+		border-radius: 12px
+		@media ( max-width: 1250px )
+			padding: 19px 30px
+		@media ( max-width: 1140px )
+			padding: 18px
+		@media ( max-width: 1024px )
+			padding: 16px
+		@media ( max-width: 991px )
+			text-align: center
+		@media ( max-width: 425px )
+			padding: 10.5px 16px
+			font-size: 20px
+			font-weight: 400
+			text-transform: none
+		@media ( max-width: 375px )
+			font-size: 18px
+		&::after
+			@media ( max-width: 991px )
+				content: ''
+				position: absolute
+				width: 100%
+				height: 5px
+				bottom: 0
+				background: $headerLinkMobileBorder
+				border-radius: 24px
+		&:hover
+			color: $companyColor
+		&_active
+			color: $companyColor
+		&_logo
+			font-size: 32px
+			line-height: 120%
+			color: $mainColor
+			box-shadow: 1px 0 7px 0 $defaultShadow
+			background: $headerLinkBg
+			border-radius: 20px
+			@media ( max-width: 1010px )
+				font-size: 28px
+			@media ( max-width: 991px )
+				border-radius: 10px
+				font-size: 32px
+			@media ( max-width: 425px )
+				font-weight: 700
+				padding: 12px 16px
+				font-size: 26px
+				line-height: 100%
+				border: 0
+				text-transform: uppercase
+			&::after
+				@media ( max-width: 991px )
+					display: none
+			&:hover
+				color: $mainColor
+		&:not(&_logo)
+			padding: 18px
+			font-size: 18px
+			@media ( max-width: 1200px )
+				padding: 12px
+			@media ( max-width: 1100px )
+				font-size: 16px
+			@media ( max-width: 1010px )
+				padding: 0
+				font-size: 14px
+			@media ( max-width: 991px )
+				font-size: 24px
+			@media ( max-width: 425px )
+				font-size: 20px
+			@media ( max-width: 375px )
+				font-size: 18px
+	&__languages
+		@include absoluteRight(50%, 2%)
+		transform: translateY(-50%)
+		@media ( max-width: 1350px )
+			top: -35px
+			right: 3.5%
+		@media ( max-width: 991px )
+			right: 0

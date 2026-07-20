@@ -1,0 +1,182 @@
+@use 'base/index' as *
+
+.preparat
+	padding-top: 200px
+	@media ( max-width: 991px )
+		padding-top: 80px
+		min-height: auto
+	&__top
+		position: relative
+		@include flexCenter
+	&__img
+		width: 784px
+		height: 428px
+		z-index: 3
+		@media ( max-width: 991px )
+			width: 100%
+			height: auto
+	&__left, &__right
+		@include absolute(unset, unset)
+		z-index: 2
+	&__left
+		align-self: flex-start
+		top: 40px
+		left: 0
+		@media ( max-width: 1250px )
+			top: 10px
+		@media ( max-width: 991px )
+			display: none
+	&__right
+		align-self: flex-end
+		right: 0
+		bottom: 80px
+		@media ( max-width: 1250px )
+			bottom: 55px
+		@media ( max-width: 991px )
+			display: none
+	&__wrapper
+		margin-top: 105px
+	&__bottom
+		position: relative
+		@media ( max-width: 991px )
+			display: none
+		&_mobile
+			display: none
+			@media ( max-width: 991px )
+				display: block
+	&__paginations
+		top: -32px!important
+		bottom: unset!important
+		background: $preparatPaginationsBg
+		border-radius: 24px
+		height: 17px
+	&__block__paginations
+		margin-top: 64px
+		@include flexCenter($alignItems: flex-start)
+	&__paginations__text
+		margin-top: 32px
+		position: relative
+		width: 25%
+		font-weight: 700
+		font-size: 24px
+		line-height: 140%
+		text-align: center
+		text-transform: uppercase
+		color: $mainColor
+		cursor: pointer
+		&_active
+			color: $companyColor
+			&::before
+				@include before(-80px, 40%)
+				width: 50px
+				height: 50px
+				border-radius: 50%
+				background: $mainBg
+				z-index: 10
+				box-shadow: 5px 5px 10px 0 $mainShadow
+	&__item
+		cursor: url('icons/cursor-move.svg'), auto
+		&__wrapper
+			@include flexHorisontalCenter(space-between)
+			@media ( max-width: 1250px )
+				flex-direction: column
+				align-items: center
+				gap: 32px
+			@media ( max-width: 375px )
+				gap: 16px
+		&__border
+			padding: 42px
+			border-radius: 30px
+			border: 2px solid $secondBorder
+			@media ( max-width: 991px )
+				border: 2px solid $companyBorder
+				padding: 24px 18px
+			&_width
+				@include flexReverseAxios
+				justify-content: space-between
+				padding: 46px 22px 26px
+				width: 32%
+				min-height: 420px
+				@media ( max-width: 1250px )
+					width: 100%
+				@media ( max-width: 991px )
+					padding: 32px 18px
+				@media ( max-width: 425px )
+					min-height: 250px
+				@media ( max-width: 375px )
+					min-height: 125px
+		&__header
+			font-weight: 700
+			font-size: 32px
+			color: $mainColor
+			@media ( max-width: 991px )
+				color: $secondColor
+			@media ( max-width: 576px )
+				font-size: 24px
+			@media ( max-width: 425px )
+				font-size: 18px
+			@media ( max-width: 375px )
+				font-size: 16px
+			br
+				@media ( max-width: 1250px )
+					display: none
+	&__info
+		margin-top: 42px
+		@media ( max-width: 991px )
+			display: grid
+			gap: 32px
+		@media ( max-width: 425px )
+			margin-top: 26px
+			gap: 16px
+	&__block__text
+		@include flexVerticalCenter
+		gap: 10px
+		flex-wrap: wrap
+	&__subheader, &__text, &__menu
+		font-weight: 700
+		font-size: 24px
+		line-height: 140%
+		color: $mainColor
+		@media ( max-width: 991px )
+			color: $secondColor
+		@media ( max-width: 480px )
+			font-size: 22px
+		@media ( max-width: 425px )
+			font-size: 20px
+		@media ( max-width: 375px )
+			font-size: 18px
+	&__text, &__menu
+		font-weight: 400
+		@media ( max-width: 425px )
+			font-size: 18px
+		@media ( max-width: 375px )
+			font-size: 16px
+		&_mobile
+			@media ( max-width: 991px )
+				line-height: 1
+		&_bold
+			line-height: 1
+			font-weight: 700
+		&_small
+			font-size: 16px
+			@media ( max-width: 425px )
+				font-size: 14px
+			@media ( max-width: 375px )
+				font-size: 12px
+	&__span
+		font-weight: 700
+	&__menu
+		list-style: disc
+	&__list
+		margin-left: 40px
+	&__additional__info
+		margin-top: 42px
+		@media ( max-width: 991px )
+			margin-top: 32px
+		@media ( max-width: 425px )
+			margin-top: 16px
+	&__block__btn
+		display: flex
+		justify-content: flex-end
+		@media ( max-width: 768px )
+			margin-top: 32px

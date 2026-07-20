@@ -1,0 +1,166 @@
+@use '../base/index' as *
+
+.modal
+	@include absoluteCenter(30%)
+	position: fixed
+	width: 1340px
+	min-height: 614px
+	padding: 90px 120px
+	box-shadow: 13px 9px 57px 0 $mainShadow
+	background: $modalBg
+	border-radius: 50px
+	z-index: 50
+	@media ( max-width: 1350px )
+		width: 95%
+	@media ( max-width: 1250px )
+		padding: 64px 90px!important
+		min-height: auto
+	@media ( max-width: 991px )
+		min-height: auto
+	@media ( max-width: 768px )
+		padding: 64px!important
+	@media ( max-width: 676px )
+		padding: 48px!important
+	@media ( max-width: 480px )
+		padding: 32px!important
+		border-radius: 20px
+	@media ( max-width: 375px )
+		padding: 30px 18px!important
+	&_research-page-details
+		padding: 60px 96px 72px
+		transition: 1.8s
+		@media ( max-width: 1024px )
+			height: 662px
+			overflow-y: auto
+		@media ( max-width: 480px )
+			border-radius: 28px
+			height: 690px
+		&::-webkit-scrollbar
+			display: none
+	&__close
+		@include absoluteRight(48px, 48px)
+		width: 58px
+		height: 58px
+		@include doubleBackground('icons/modal-close-icon.svg', 40%, $modalBg)
+		box-shadow: 0 4px 14px 0 $mainShadow
+		border-radius: 50%
+		cursor: pointer
+		@media ( max-width: 768px )
+			width: 50px
+			height: 50px
+			top: 52px
+			right: 30px
+		@media ( max-width: 676px )
+			top: 44px
+		@media ( max-width: 576px )
+			top: 38px
+		@media ( max-width: 480px )
+			width: 45px
+			height: 45px
+			top: 25px
+		@media ( max-width: 425px )
+			top: 20px
+			right: 20px
+	&__info
+		margin-top: 56px
+		@include flexReverseAxios
+		gap: 56px
+		@media ( max-width: 768px )
+			margin-top: 48px
+			gap: 32px
+		@media ( max-width: 425px )
+			gap: 24px
+			margin-top: 36px
+	&__block__form
+		margin-top: 60px
+		@media ( max-width: 425px )
+			margin-top: 32px
+		@media ( max-width: 375px )
+			margin-top: 20px
+	&__block__input__wrapper
+		@include flexCenter(space-between)
+		flex-wrap: wrap
+		row-gap: 40px
+		@media ( max-width: 768px )
+			flex-direction: column
+		@media ( max-width: 425px )
+			row-gap: 32px
+		@media ( max-width: 375px )
+			row-gap: 10px
+	&__block__input
+		@include flexReverseAxios
+		border-radius: 20px
+		width: 48%
+		@media ( max-width: 768px )
+			width: 100%
+	&__label
+		font-weight: 700
+		font-size: 24px
+		line-height: 140%
+		@media ( max-width: 375px )
+			font-size: 16px
+	&__input
+		padding: 18px 26px
+		margin-top: 28px
+		height: 55px
+		font-size: 16px
+		line-height: 140%
+		border: 2px solid $modalInputBorder
+		border-radius: 20px
+		color: $modalInputColor
+		@media ( max-width: 425px )
+			height: 45px
+			margin-top: 16px
+			padding: 15px
+			font-size: 14px
+		@media ( max-width: 375px )
+			margin-top: 6px
+			font-size: 12px
+	&__block__checkbox__wrapper
+		margin-top: 60px
+		@include flexReverseAxios
+		gap: 20px
+		@media ( max-width: 425px )
+			margin-top: 32px
+		@media ( max-width: 375px )
+			margin-top: 20px
+			gap: 10px
+	&__label__checkbox
+		font-size: 16px
+		line-height: 140%
+		color: $companyColor
+	&__text
+		font-size: 24px
+		line-height: 140%
+		@media ( max-width: 576px )
+			font-size: 22px
+		@media ( max-width: 480px )
+			font-size: 20px
+		@media ( max-width: 425px )
+			font-size: 18px
+		@media ( max-width: 375px )
+			font-size: 16px
+	br
+		@media ( max-width: 1350px )
+			display: none
+	&__link
+		display: inline-flex
+		text-decoration: underline
+		color: $companyColor
+	&__block__btns
+		@include flexVerticalCenter(baseline)
+		gap: 46px
+		margin-top: 45px
+		@media ( max-width: 576px )
+			gap: 32px
+		@media ( max-width: 425px )
+			margin-top: 34px
+		@media ( max-width: 375px )
+			gap: 20px
+		&_research-page-details
+			margin-top: 48px
+			@media ( max-width: 425px )
+				margin-top: 34px
+	&_noactive
+		top: -9999px
+		transition: 1.8s

@@ -1,0 +1,91 @@
+@use '../base/index' as *
+
+.research-page-details
+	padding-top: 80px
+	@media ( max-width: 991px )
+		padding-top: 64px
+	@media ( max-width: 576px )
+		padding-top: 32px
+	&__wrapper
+		display: grid
+		gap: 60px
+	&__items
+		@include flexHorisontalCenter(space-between)
+		flex-direction: column
+		padding: 56px 40px 34px
+		border-radius: 69px
+		min-height: 560px
+		box-shadow: 10px 10px 20px 0 $mainShadow
+		@include doubleBackground('img/research-page/research-page-details/research-page-details-bg.png', contain, $mainBg)
+		background-position-x: right
+		@media ( max-width: 1300px )
+			background-position-y: top
+			background-size: 60%
+		@media ( max-width: 991px )
+			padding: 0
+			border-radius: 28px
+			background: $researchPageDetailsItemsMobileBg, url('img/research-page/research-page-details/research-page-details-bg.png') no-repeat
+			background-size: 60%
+			background-position-x: right
+		@media ( max-width: 425px )
+			min-height: auto
+			background-position-x: 135%
+	&__top
+		@media ( max-width: 991px )
+			padding: 36px
+		@media ( max-width: 576px )
+			padding: 24px
+		@media ( max-width: 425px )
+			padding: 32px 18px
+	&__subheader
+		margin-bottom: 40px
+		font-weight: 700
+		font-size: 24px
+		line-height: 140%
+		@media ( max-width: 576px )
+			margin-bottom: 24px
+		@media ( max-width: 480px )
+			font-size: 22px
+		@media ( max-width: 425px )
+			font-size: 20px
+			margin-bottom: 32px
+		@media ( max-width: 375px )
+			font-size: 16px
+	&__descriptions
+		border-radius: 26px
+		background: $mainBg
+		@media ( max-width: 991px )
+			margin-top: 32px
+			padding: 0 36px
+			border-radius: 0
+		@media ( max-width: 576px )
+			padding: 0 24px
+			margin-top: 16px
+		@media ( max-width: 425px )
+			padding: 0 18px
+			margin-top: 0
+	&__text
+		padding: 38px 0
+		font-size: 24px
+		line-height: 140%
+		@media ( max-width: 576px )
+			font-size: 22px
+			padding: 24px 0
+		@media ( max-width: 480px )
+			font-size: 20px
+		@media ( max-width: 425px )
+			font-size: 18px
+		@media ( max-width: 375px )
+			font-size: 16px
+	&__block__btn
+		@include flexCenter(flex-start)
+		gap: 32px
+		@media ( max-width: 991px )
+			flex-direction: column
+			align-items: flex-start
+			padding: 36px
+		@media ( max-width: 576px )
+			padding: 24px
+		@media ( max-width: 425px )
+			padding: 18px
+			gap: 18px

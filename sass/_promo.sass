@@ -1,0 +1,37 @@
+@use 'base/index' as *
+
+.promo
+	min-height: 814px
+	padding: 155px 50px
+	@include background('img/promo-bg.png')
+	border-radius: 30px
+	@media ( max-width: 1440px )
+		min-height: 614px
+	@media ( max-width: 1250px )
+		min-height: auto
+		padding: 100px 50px
+	@media ( max-width: 991px )
+		width: 95%
+		margin: 0 auto
+		padding: 64px 0
+		padding-right: 15px
+	@media ( max-width: 480px )
+		border-radius: 20px
+		padding: 48px 0
+	@media ( max-width: 425px )
+		@include background('img/promo-bg-mobile.png')
+	@media ( max-width: 375px )
+		padding: 46px 15px 42px 0
+	&__wrapper
+		@include flexCenter
+		width: 700px
+		min-height: 500px
+		@media ( max-width: 1440px )
+			min-height: 300px
+		@media ( max-width: 991px )
+			width: 600px
+		@media ( max-width: 768px )
+			width: 100%
+			min-height: auto
+	&__span
+		text-transform: none

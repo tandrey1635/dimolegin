@@ -1,0 +1,35 @@
+@use '../base/index' as *
+
+.burger__menu
+	width: 58px
+	height: 58px
+	@include absoluteRight(6px, 10px)
+	display: none
+	z-index: 10
+	@media ( max-width: 991px )
+		@include flexCenter
+		flex-direction: column
+		gap: 10px
+	@media ( max-width: 425px )
+		width: 40px
+		height: 30px
+		gap: 6px
+		top: 10px
+	&__line
+		display: block
+		width: 40px
+		height: 2px
+		background: $burgerMenuLineBg
+		&_active
+			position: absolute
+			transition: .5s
+			@media ( max-width: 425px )
+				width: 30px
+			&:first-child
+				transform: rotate(45deg)
+			&:nth-child(2)
+				display: none
+			&:last-child
+				transform: rotate(-45deg)
+				@media ( max-width: 425px )
+					top: 14px

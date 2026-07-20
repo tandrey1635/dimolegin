@@ -1,0 +1,107 @@
+@use '../base/index' as *
+
+/* Switcher языка */
+.block__lable__checkbox
+	@include flexVerticalCenter
+
+/* Текст чекбокса */
+.label__languages-checkbox
+	cursor: pointer
+	font-weight: 700
+	font-size: 18px
+	text-transform: uppercase
+	@media ( max-width: 1100px )
+		font-size: 16px
+
+/* Стандартный чекбокс */
+.default__languages-checkbox
+	display: none
+
+.custom__checkbox__wrapper
+	@include flexVerticalCenter
+	gap: 8px
+
+/* Кастомный чекбокс */
+.custom__languages-checkbox
+	position: relative
+	display: block
+	width: 78px
+	height: 32px
+	background: $languagesCheckboxEngBg
+	cursor: pointer
+	transition: .5s
+	border-radius: 20px
+	box-shadow: 1px 0 8px 0 $defaultShadow
+	@media ( max-width: 375px )
+		width: 56px
+		height: 23px
+	/* Внутренний круг */
+	&::before
+		@include before(2px, 3px)
+		background: $mainBg
+		width: 28px
+		height: 28px
+		transition: .5s
+		border-radius: 50%
+		box-shadow: 0 3px 1px 0 $languagesInnerCheckboxShadow
+		@media ( max-width: 375px )
+			width: 18px
+			height: 18px
+
+/* При состоянии checked - показываем внутренний чекбокс */
+.default__languages-checkbox:checked + .custom__checkbox__wrapper > .custom__languages-checkbox
+	background: $languagesCheckboxRuBg
+
+/* При состоянии checked - показываем внутренний чекбокс */
+.default__languages-checkbox:checked + .custom__checkbox__wrapper > .custom__languages-checkbox::before
+	background: $mainBg
+
+/* При состоянии checked - показываем внутренний чекбокс */
+.default__languages-checkbox:checked + .custom__checkbox__wrapper > .custom__languages-checkbox::before
+	transform: translateX(44px)
+	@media ( max-width: 375px )
+		transform: translateX(32px)
+
+
+
+
+.modal__label__checkbox
+	@include flexVerticalCenter
+
+.label
+	margin-left: 20px
+	cursor: pointer
+	@media ( max-width: 425px )
+		font-size: 14px
+		line-height: 108%
+	@media ( max-width: 375px )
+		font-size: 12px
+
+.default-checkbox
+	display: none
+
+/* Стили для поля кастомного чекбокса */
+.custom-checkbox
+	position: relative
+	display: block
+	flex-shrink: 0
+	width: 30px
+	height: 30px
+	border: 2px solid $modalCheckboxBorder
+	border-radius: 8px
+	background: $mainBg
+	cursor: pointer
+
+/* Стили для внутреннего квадрата внутри чекбокса */
+.custom-checkbox::before
+	@include before(50%, 50%)
+	display: none
+	width: 18px
+	height: 18px
+	border-radius: 3px
+	transform: translate(-50%, -50%)
+	background: $modalCheckboxBg
+
+/* При состоянии checked - показываем внутренний чекбокс */
+.default-checkbox:checked + .custom-checkbox::before
+	display: block

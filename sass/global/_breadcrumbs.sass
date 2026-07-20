@@ -1,0 +1,20 @@
+@use '../base/index' as *
+
+.breadcrumbs
+	&__wrapper
+		@include flexVerticalCenter
+		gap: 18px
+	&__text
+		@include flexCenter
+		gap: 18px
+		@media ( max-width: 375px )
+			font-size: 14px
+		&_back
+			color: $companyColor
+	&__link
+		line-height: 140%
+		color: $secondColor
+		&:last-child
+			color: $companyColor
+		&:hover
+			color: $companyColor

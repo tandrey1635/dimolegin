@@ -1,0 +1,89 @@
+@use 'sass/base/variables' as *
+@use 'sass/base/reset'
+@use 'sass/base/mixins' as *
+
+
+@use 'sass/global/burger-menu'
+@use 'sass/global/modal'
+@use 'sass/global/custom-checkbox'
+@use 'sass/global/breadcrumbs'
+@use 'sass/global/btns'
+@use 'sass/global/paginations'
+@use 'sass/global/titles'
+@use 'sass/global/header'
+@use 'sass/global/footer'
+@use 'sass/promo'
+@use 'sass/about'
+@use 'sass/mission'
+@use 'sass/history'
+@use 'sass/preparat'
+@use 'sass/accordeon'
+@use 'sass/specialists'
+@use 'sass/specialists/specialists-page'
+@use 'sass/research'
+@use 'sass/research/research-page-promo'
+@use 'sass/research/research-page-how-work'
+@use 'sass/research/research-page-phase'
+@use 'sass/research/research-page-details'
+@use 'sass/research/research-details'
+@use 'sass/news'
+@use 'sass/news/news-details'
+
+
+/* Прижать подвал Флекс */
+.wrapper
+	@include flexReverseAxios
+	@media ( max-width: 991px )
+		overflow-x: hidden
+	&_gradient
+		background: $newsPageBg
+		@media ( max-width: 991px )
+			background: $mainBg
+	&__main__gradient
+		position: relative
+		&::after
+			width: 100%
+			height: 4200px
+			@include after(-330px)
+			z-index: -1
+			background: $wrapperMainGradientBg
+			@media ( max-width: 1250px )
+				height: 4800px
+			@media ( max-width: 991px )
+				display: none
+
+
+.blur
+	transition: 1.8s
+	filter: blur(32px)
+
+.overflow
+	overflow: hidden
+
+html, body
+	height: 100%
+
+html
+	scroll-behavior: smooth
+
+body
+	font-family: $mainFont
+	color: $secondColor
+
+header, footer
+	min-height: 100px
+
+main
+	flex: 1 0 auto
+	min-height: 100vh
+
+section
+	min-height: 600px
+
+footer
+	flex: 0 0 auto
+
+.container
+	max-width: 1340px
+	padding: 0 15px
+	margin: 0 auto

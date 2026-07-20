@@ -1,0 +1,47 @@
+@use 'base/index' as *
+
+.specialists
+	padding-top: 115px
+	@media ( max-width: 991px )
+		padding-top: 64px
+	@media ( max-width: 425px )
+		padding-top: 48px
+	&__wrapper
+		margin-top: 59px
+		display: grid
+		gap: 32px
+		@media ( max-width: 425px )
+			margin-top: 39px
+	&__item
+		position: relative
+		padding: 30px 28px 30px 91px
+		border-radius: 28px
+		box-shadow: 10px 10px 20px 0 $mainShadow
+		border: 3px solid transparent
+		background: $specialistsItemBg
+		min-height: 300px
+		@media ( max-width: 991px )
+			padding: 36px
+		@media ( max-width: 576px )
+			padding: 36px 30px
+		br
+			@media ( max-width: 991px )
+				display: none
+	&__info
+		width: 70%
+		margin-top: 34px
+		display: grid
+		gap: 32px
+		@media ( max-width: 676px )
+			width: 100%
+		@media ( max-width: 425px )
+			margin-top: 26px
+	&__text
+		font-size: 16px
+		line-height: 140%
+		@media ( max-width: 375px )
+			font-size: 14px
+	&__block__btn
+		margin-top: 60px
+		@media ( max-width: 425px )
+			margin-top: 40px

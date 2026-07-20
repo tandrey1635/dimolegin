@@ -1,0 +1,99 @@
+@use 'base/index' as *
+
+.about
+	padding: 80px 0
+	@media ( max-width: 576px )
+		padding: 64px 0
+	@media ( max-width: 425px )
+		padding: 30px 0
+	&__wrapper
+		margin-top: 80px
+		@include flexHorisontalCenter(space-between)
+		gap: 24px
+		@media ( max-width: 1250px )
+			flex-direction: column
+			gap: 64px
+		@media ( max-width: 576px )
+			margin-top: 64px
+		@media ( max-width: 425px )
+			margin-top: 30px
+			gap: 30px
+	&__left, &__right
+		@include flexReverseAxios
+		justify-content: space-between
+		width: 50%
+		min-height: 1120px
+		border-radius: 30px
+		box-shadow: 10px 10px 20px 0 $itemsShadow
+		border-radius: 30px
+		@media ( max-width: 1250px )
+			width: 100%
+		@media ( max-width: 991px )
+			justify-content: center
+			min-height: auto
+		@media ( max-width: 425px )
+			border-radius: 20px
+			box-shadow: 5px 5px 10px 0 $mainShadow
+	&__left
+		padding-bottom: 44px
+		background: $aboutItemsLeftBg
+		@media ( max-width: 425px )
+			padding-bottom: 30px
+	&__right
+		padding-top: 44px
+		background: $aboutItemsRightBg
+		@media ( max-width: 425px )
+			padding-top: 30px
+	&__img
+		border-radius: 30px
+		@media ( max-width: 768px )
+			height: 500px!important
+		@media ( max-width: 676px )
+			height: 400px!important
+		@media ( max-width: 480px )
+			height: 300px!important
+		@media ( max-width: 425px )
+			border-radius: 20px
+			height: 250px!important
+		@media ( max-width: 375px )
+			height: 225px!important
+		&_left
+			height: 645px
+			margin-bottom: 60px
+			@media ( max-width: 991px )
+				margin-bottom: 48px
+			@media ( max-width: 425px )
+				margin-bottom: 30px
+			@media ( max-width: 375px )
+				margin-bottom: 18px
+		&_right
+			height: 418px
+			margin-top: 86px
+			@media ( max-width: 1250px )
+				height: 645px
+			@media ( max-width: 991px )
+				margin-top: 48px
+			@media ( max-width: 425px )
+				margin-top: 30px
+			@media ( max-width: 375px )
+				margin-top: 18px
+	img
+		border-radius: inherit
+	&__descriptions
+		display: grid
+		gap: 32px
+		padding: 0 32px
+		@media ( max-width: 425px )
+			gap: 24px
+			padding: 0 16px
+	&__text
+		font-size: 24px
+		line-height: 140%
+		@media ( max-width: 480px )
+			font-size: 22px
+		@media ( max-width: 425px )
+			font-size: 18px
+		@media ( max-width: 375px )
+			font-size: 16px
+	&__span
+		color: $companyColor

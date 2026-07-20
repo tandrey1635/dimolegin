@@ -1,0 +1,252 @@
+@use '../base/index' as *
+
+.research-page__promo
+	padding-top: 80px
+	@media ( max-width: 576px )
+		padding-top: 64px
+	@media ( max-width: 425px )
+		padding-top: 30px
+	&__top
+		padding: 128px 110px 54px
+		margin-top: 80px
+		min-height: 567px
+		@include doubleBackground('img/research-page/research-page-promo-bg.png', contain, $mainBg)
+		background-position: right
+		border-radius: 69px
+		box-shadow: 10px 10px 20px 0 $mainShadow
+		@media ( max-width: 1140px )
+			padding: 90px 64px 64px
+			min-height: auto
+		@media ( max-width: 991px )
+			margin-top: 64px
+			background-position-x: 130%
+			background-position-y: 100%
+			background-size: 60%
+		@media ( max-width: 850px )
+			padding: 56px
+		@media ( max-width: 768px )
+			padding: 32px 48px
+			background-position-x: 135%
+		@media ( max-width: 576px )
+			margin-top: 32px
+			border-radius: 35px
+			padding: 32px
+		@media ( max-width: 480px )
+			background-position-x: 170%
+			background-position-y: 100%
+			background-size: 70%
+		@media ( max-width: 425px )
+			border-radius: 20px
+			padding: 22px
+		@media ( max-width: 375px )
+			margin-top: 0
+	&__block__search__field
+		position: relative
+		margin-top: 70px
+		@media ( max-width: 676px )
+			margin-top: 50px
+		@media ( max-width: 425px )
+			margin-top: 32px
+		@media ( max-width: 375px )
+			margin-top: 20px
+		&__icon
+			width: 32px
+			height: 32px
+			@include after(25px, 30px)
+			@include background('icons/search-icon.svg', contain)
+			@media ( max-width: 676px )
+				width: 25px
+				height: 25px
+				top: 20px
+			@media ( max-width: 576px )
+				top: 17px
+				right: 20px
+			@media ( max-width: 425px )
+				top: 11px
+			&_active
+				@include background('icons/close-icon.svg', contain)
+				cursor: pointer
+		&__result
+			padding: 10px 0
+			@include absolute(84px, 50%)
+			transform: translateX(-50%)
+			z-index: 10
+			display: none
+			border: 1px solid transparent
+			background: $searchFieldResultBorder
+			border-top: none
+			border-radius: 0 0 28px 28px
+			width: 886px
+			height: 254px
+			@media ( max-width: 1250px )
+				width: 90%
+			@media ( max-width: 850px )
+				width: 80%
+			@media ( max-width: 676px )
+				top: 64px
+				height: 205px
+			@media ( max-width: 576px )
+				top: 56px
+			@media ( max-width: 480px )
+				height: 195px
+			@media ( max-width: 425px )
+				top: 45px
+				height: 185px
+			&_active
+				display: block
+			&__menu
+				height: inherit
+				font-weight: 400
+				font-size: 24px
+				line-height: 140%
+				overflow-y: scroll
+				@media ( max-width: 676px )
+					line-height: 110%
+					font-size: 20px
+				@media ( max-width: 480px )
+					font-size: 18px
+				@media ( max-width: 425px )
+					font-size: 16px
+				&::-webkit-scrollbar
+					width: 0
+			&__list
+				padding: 12px 0
+				padding-left: 107px
+				cursor: pointer
+				@media ( max-width: 768px )
+					padding: 12px 32px
+				@media ( max-width: 576px )
+					padding: 12px 26px
+				@media ( max-width: 480px )
+					padding: 12px 18px
+				&:not(:last-child)
+					border-bottom: 1px solid #0cace04d
+	&__search__field
+		padding: 5px 20px
+		padding-right: 74px
+		border: 6px solid $researchPageSearchFieldBorder
+		border-radius: 88px
+		width: 100%
+		height: 84px
+		font-weight: 400
+		font-size: 24px
+		line-height: 140%
+		color: $secondColor
+		@media ( max-width: 676px )
+			height: 64px
+			font-size: 20px
+			border: 4px solid $researchPageSearchFieldBorder
+		@media ( max-width: 576px )
+			height: 56px
+		@media ( max-width: 425px )
+			height: 45px
+			border: 3px solid $researchPageSearchFieldBorder
+			font-size: 18px
+		@media ( max-width: 375px )
+			font-size: 16px
+	&__block__btn
+		margin-top: 70px
+		@media ( max-width: 676px )
+			margin-top: 50px
+		@media ( max-width: 425px )
+			margin-top: 16px
+	&__bottom
+		margin-top: 80px
+		@media ( max-width: 676px )
+			margin-top: 64px
+		@media ( max-width: 480px )
+			margin-top: 46px
+	&__text
+		font-weight: 700
+		font-size: 32px
+		line-height: 120%
+		@media ( max-width: 676px )
+			font-size: 26px
+		@media ( max-width: 576px )
+			font-size: 22px
+		@media ( max-width: 425px )
+			font-size: 20px
+			padding: 0 15px
+		@media ( max-width: 375px )
+			font-size: 18px
+	&__item
+		margin-top: 60px
+		min-height: 397px
+		@include flexCenter(space-between)
+		box-shadow: 10px 10px 20px 0 $mainShadow
+		background: $researchItemsBg
+		border-radius: 28px
+		@media ( max-width: 1140px )
+			min-height: 350px
+		@media ( max-width: 991px )
+			flex-direction: column
+			box-shadow: 5px 5px 10px 0 $mainShadow
+		@media ( max-width: 576px )
+			min-height: 300px
+		@media ( max-width: 480px )
+			margin-top: 32px
+		@media ( max-width: 425px )
+			min-height: 250px
+			border-radius: 20px
+		@media ( max-width: 375px )
+			min-height: 200px
+	&__left, &__right
+		min-height: inherit
+		@media ( max-width: 991px )
+			width: 100%!important
+	&__left
+		width: 750px
+		height: 397px
+		border-radius: 28px
+		@media ( max-width: 1250px )
+			width: 55%
+		@media ( max-width: 1140px )
+			width: 50%
+			height: 350px
+		@media ( max-width: 991px )
+			height: auto
+		@media ( max-width: 425px )
+			border-radius: 20px
+	&__right
+		position: relative
+		@include flexVerticalCenter
+		width: 45%
+	img
+		min-height: inherit
+		border-radius: inherit
+	&__descriptions
+		@include flexReverseAxios
+		justify-content: space-between
+		min-height: inherit
+		padding: 40px 32px 36px 62px
+		@media ( max-width: 1140px )
+			padding: 36px 0
+		@media ( max-width: 991px )
+			padding: 36px
+		@media ( max-width: 676px )
+			padding: 32px
+		@media ( max-width: 480px )
+			padding: 16px
+	&__info, &__menu
+		font-size: 24px
+		line-height: 140%
+		color: $mainColor
+		@media ( max-width: 1024px )
+			font-size: 22px
+		@media ( max-width: 480px )
+			font-size: 20px
+		@media ( max-width: 425px )
+			font-size: 18px
+		@media ( max-width: 375px )
+			font-size: 16px
+	&__menu
+		font-weight: 700
+		list-style: decimal
+		margin-left: 22px
+		@media ( max-width: 425px )
+			font-weight: 400
+			margin-top: 20px
+	&__span
+		font-weight: 700
+		@media ( max-width: 425px )
+			font-weight: 400

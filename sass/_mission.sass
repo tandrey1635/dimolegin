@@ -1,0 +1,203 @@
+@use 'base/index' as *
+
+.mission
+	position: relative
+	@media ( max-width: 1250px )
+		overflow-x: clip
+	&::after
+		width: 380px
+		height: 474px
+		@include after($top: unset)
+		@include background('img/mission-bg.png', contain)
+		bottom: 200px
+		@media ( max-width: 1250px )
+			height: 400px
+			bottom: 400px
+			right: 0
+			z-index: -1
+			right: -30px
+		@media ( max-width: 991px )
+			bottom: 350px
+			width: 300px
+			height: 300px
+		@media ( max-width: 768px )
+			width: 250px
+			height: 250px
+		@media ( max-width: 676px )
+			bottom: 250px
+		@media ( max-width: 576px )
+			bottom: 200px
+		@media ( max-width: 480px )
+			width: 200px
+			height: 200px
+		@media ( max-width: 425px )
+			@include background('img/mission-bg-mobile.png', contain)
+			left: -40px
+			bottom: 150px
+		@media ( max-width: 375px )
+			bottom: -20px
+	&__text
+		margin-top: 80px
+		font-size: 24px
+		line-height: 140%
+		@media ( max-width: 991px )
+			text-align: center
+		@media ( max-width: 768px )
+			margin-top: 64px
+		@media ( max-width: 576px )
+			margin-top: 48px
+		@media ( max-width: 480px )
+			font-size: 22px
+		@media ( max-width: 425px )
+			font-size: 18px
+			margin-top: 30px
+		@media ( max-width: 375px )
+			font-size: 16px
+			text-align: left
+	&__info
+		margin-top: 60px
+		@media ( max-width: 425px )
+			margin-top: 30px
+		@media ( max-width: 375px )
+			width: 110%
+			border-radius: 20px
+			padding: 28px 16px
+			padding-right: 28px
+			box-shadow: 5px 5px 10px 0 $mainShadow
+			background: $missionItemsMobileBg
+	&__subheader
+		font-weight: 700
+		font-size: 32px
+		line-height: 120%
+		text-transform: uppercase
+		@media ( max-width: 991px )
+			text-align: center
+		@media ( max-width: 480px )
+			font-size: 26px
+		@media ( max-width: 425px )
+			font-size: 20px
+		@media ( max-width: 375px )
+			width: 75%
+			font-size: 18px
+			text-align: left
+	&__span
+		color: $companyColor
+	&__menu
+		margin-top: 56px
+		list-style: disc
+		font-size: 24px
+		line-height: 140%
+		@media ( max-width: 576px )
+			margin-top: 48px
+		@media ( max-width: 480px )
+			font-size: 22px
+		@media ( max-width: 425px )
+			font-size: 18px
+			margin-top: 30px
+		@media ( max-width: 375px )
+			margin-top: 20px
+			font-size: 16px
+			text-align: left
+	&__list
+		margin-left: 22px
+	&__wrapper
+		margin-top: 60px
+		@include flexHorisontalCenter(space-between)
+		gap: 24px
+		@media ( max-width: 1250px )
+			flex-direction: column
+		@media ( max-width: 576px )
+			margin-top: 48px
+		@media ( max-width: 425px )
+			margin-top: 30px
+			gap: 30px
+	&__left, &__right
+		padding-top: 22px
+		width: 50%
+		box-shadow: 10px 10px 20px 0 $itemsShadow
+		border-radius: 30px
+		@media ( max-width: 1250px )
+			width: 100%
+			padding-top: 0
+		@media ( max-width: 425px )
+			box-shadow: 5px 5px 10px 0 $mainShadow
+			border-radius: 20px
+	&__left
+		@include flexReverseAxios
+		justify-content: space-between
+		background: $missionItemsLeftBg
+	&__right
+		background: $missionItemsRightBg
+		min-height: 355px
+		max-height: fit-content
+		@media ( max-width: 768px )
+			min-height: auto
+			max-height: unset
+	&__descriptions
+		padding: 28px
+		@media ( max-width: 425px )
+			padding: 16px
+	&__items__text
+		font-size: 24px
+		line-height: 140%
+		@media ( max-width: 480px )
+			font-size: 22px
+		@media ( max-width: 425px )
+			font-size: 18px
+		@media ( max-width: 375px )
+			font-size: 16px
+	&__img
+		height: 386px
+		border-radius: 30px
+		@media ( max-width: 1250px )
+			height: 645px
+			margin-top: 86px
+		@media ( max-width: 991px )
+			margin-top: 48px
+		@media ( max-width: 768px )
+			height: 500px
+		@media ( max-width: 676px )
+			height: 400px
+		@media ( max-width: 576px )
+			margin-top: 48px
+		@media ( max-width: 480px )
+			height: 300px
+		@media ( max-width: 425px )
+			margin-top: 30px
+			height: 250px
+			border-radius: 20px
+		@media ( max-width: 375px )
+			margin-top: 18px
+			height: 225px
+		img
+			border-radius: inherit
+	&__innovation
+		margin-top: 120px
+		@media ( max-width: 576px )
+			margin-top: 48px
+		@media ( max-width: 375px )
+			visibility: hidden
+		&__text
+			font-family: $secondFont
+			font-weight: 700
+			font-size: 72px
+			line-height: 120%
+			letter-spacing: -0.03em
+			background: $missionInnovationTextColor
+			background-clip: text
+			-webkit-text-fill-color: transparent
+			br
+				@media (max-width: 1250px)
+					display: none
+			@media (max-width: 991px)
+				font-size: 60px
+			@media ( max-width: 768px )
+				font-size: 56px
+			@media ( max-width: 676px )
+				font-size: 42px
+			@media ( max-width: 576px )
+				font-size: 36px
+			@media ( max-width: 480px )
+				font-size: 32px
+			@media ( max-width: 425px )
+				font-size: 26px

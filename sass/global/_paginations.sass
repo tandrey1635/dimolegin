@@ -1,0 +1,34 @@
+@use '../base/index' as *
+
+.paginations
+	@include flexCenter(flex-start)
+	gap: 16px
+	&__link
+		@include flexCenter
+		width: 45px
+		height: 45px
+		border-radius: 50%
+		font-size: 24px
+		line-height: 140%
+		text-align: center
+		color: $paginationsColor
+		border: 1px solid $paginationsBorder
+		@media ( max-width: 480px )
+			width: 40px
+			height: 40px
+			font-size: 20px
+		@media ( max-width: 375px )
+			width: 30px
+			height: 30px
+			font-size: 16px
+		&_active, &:hover
+			border: none
+			background: $paginationsBg
+			color: $mainColor
+		&_more
+			align-self: flex-end
+			height: auto
+			border: none
+			&:hover
+				color: $paginationsColor
+				background: none

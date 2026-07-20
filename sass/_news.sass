@@ -1,0 +1,121 @@
+@use 'base/index' as *
+
+.news
+	padding-top: 80px
+	@media ( max-width: 991px )
+		padding-top: 64px
+	@media ( max-width: 576px )
+		padding-top: 32px
+	&_page
+		@media ( max-width: 375px )
+			padding-top: 0
+	&__wrapper
+		margin-top: 80px
+		display: grid
+		gap: 40px
+		@media ( max-width: 991px )
+			margin-top: 64px
+		@media ( max-width: 576px )
+			margin-top: 32px
+		@media ( max-width: 425px )
+			gap: 30px
+	&__block__btn
+		margin-top: 60px
+		@media ( max-width: 425px )
+			margin-top: 34px
+	&__items
+		min-height: 397px
+		@include flexCenter(space-between)
+		box-shadow: 10px 10px 20px 0 $mainShadow
+		background: $newsItemsBg
+		border-radius: 28px
+		@media ( max-width: 1140px )
+			min-height: 350px
+		@media ( max-width: 991px )
+			flex-direction: column
+			box-shadow: 5px 5px 10px 0 $mainShadow
+		@media ( max-width: 576px )
+			min-height: 300px
+		@media ( max-width: 425px )
+			min-height: 250px
+			border-radius: 20px
+		@media ( max-width: 375px )
+			min-height: 200px
+	&__left, &__right
+		min-height: inherit
+		@media ( max-width: 991px )
+			width: 100%!important
+	&__left
+		width: 750px
+		height: 397px
+		border-radius: 28px
+		@media ( max-width: 1250px )
+			width: 55%
+		@media ( max-width: 1140px )
+			width: 50%
+			height: 350px
+		@media ( max-width: 991px )
+			height: auto
+		@media ( max-width: 425px )
+			border-radius: 20px
+	&__right
+		position: relative
+		@include flexVerticalCenter
+		width: 45%
+	img
+		min-height: inherit
+		border-radius: inherit
+	&__descriptions
+		@include flexReverseAxios
+		justify-content: space-between
+		min-height: inherit
+		padding: 52px 32px 36px 62px
+		@media ( max-width: 1140px )
+			padding: 36px 0
+		@media ( max-width: 991px )
+			padding: 36px
+		@media ( max-width: 676px )
+			padding: 32px
+		@media ( max-width: 480px )
+			padding: 16px
+	&__info
+		font-weight: 700
+		font-size: 32px
+		@media ( max-width: 1300px )
+			font-size: 30px
+		@media ( max-width: 1250px )
+			font-size: 28px
+		@media ( max-width: 768px )
+			font-size: 26px
+		@media ( max-width: 676px )
+			font-size: 24px
+		@media ( max-width: 480px )
+			font-size: 22px
+		@media ( max-width: 425px )
+			font-size: 20px
+		@media ( max-width: 375px )
+			font-size: 18px
+	br
+		@media ( max-width: 991px )
+			display: none
+	&__date
+		font-size: 32px
+		font-variant: all-small-caps
+		@media ( max-width: 1300px )
+			font-size: 30px
+		@media ( max-width: 1250px )
+			font-size: 28px
+		@media ( max-width: 768px )
+			font-size: 26px
+		@media ( max-width: 676px )
+			font-size: 24px
+		@media ( max-width: 480px )
+			font-size: 22px
+		@media ( max-width: 425px )
+			font-size: 20px
+		@media ( max-width: 375px )
+			font-size: 16px
+	&__paginations
+		margin-top: 40px
+		@media ( max-width: 425px )
+			margin-top: 30px

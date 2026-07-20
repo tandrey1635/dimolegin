@@ -1,0 +1,219 @@
+@use '../base/index' as *
+
+.title
+	font-weight: 700
+	font-size: 60px
+	text-transform: uppercase
+	@media (max-width: 991px)
+		text-align: center
+	@media ( max-width: 768px )
+		font-size: 56px
+	@media ( max-width: 676px )
+		font-size: 42px
+	@media ( max-width: 576px )
+		font-size: 36px
+	@media ( max-width: 480px )
+		font-size: 32px
+	@media ( max-width: 425px )
+		font-size: 26px
+	@media ( max-width: 375px )
+		font-size: 22px
+		text-align: left
+	&_main
+		font-size: 72px
+		letter-spacing: -0.03em
+		line-height: 120%
+		color: $mainColor
+		@media ( max-width: 991px )
+			font-size: 64px
+			text-align: left
+		@media ( max-width: 768px )
+			font-size: 60px
+		@media ( max-width: 676px )
+			font-size: 48px
+		@media ( max-width: 576px )
+			font-size: 42px
+		@media ( max-width: 480px )
+			font-size: 36px
+		@media ( max-width: 425px )
+			font-size: 30px
+		@media ( max-width: 375px )
+			font-size: 26px
+			line-height: 95%
+	&_mission
+		font-size: 80px
+		background: $companyTitleColor
+		background-clip: text
+		-webkit-text-fill-color: transparent
+		@media (max-width: 991px)
+			font-size: 60px
+		@media ( max-width: 768px )
+			font-size: 56px
+		@media ( max-width: 676px )
+			font-size: 42px
+		@media ( max-width: 576px )
+			font-size: 36px
+		@media ( max-width: 480px )
+			font-size: 32px
+		@media ( max-width: 425px )
+			font-size: 26px
+		@media ( max-width: 375px )
+			font-size: 22px
+			text-align: left
+			background: none
+			background-clip: unset
+			-webkit-text-fill-color: unset
+	&_history_main
+		font-size: 225px
+		background: $historyMainTitleColor
+		background-clip: text
+		-webkit-text-fill-color: transparent
+		text-align: center
+		@media ( max-width: 1440px )
+			font-size: 195px
+		@media ( max-width: 1250px )
+			font-size: 175px
+		@media ( max-width: 1140px )
+			font-size: 160px
+		@media ( max-width: 1024px )
+			font-size: 150px
+		@media ( max-width: 991px )
+			font-size: 130px
+		@media ( max-width: 850px )
+			font-size: 120px
+		@media ( max-width: 768px )
+			font-size: 106px
+		@media ( max-width: 676px )
+			font-size: 86px
+		@media ( max-width: 576px )
+			font-size: 74px
+		@media ( max-width: 480px )
+			font-size: 64px
+		@media ( max-width: 425px )
+			font-size: 56px
+	&_history
+		font-size: 70px
+		text-align: center
+		background: $historyTitleColor
+		background-clip: text
+		-webkit-text-fill-color: transparent
+		text-transform: none
+		@media ( max-width: 576px )
+			font-size: 56px
+		@media ( max-width: 480px )
+			font-size: 48px
+		@media ( max-width: 425px )
+			font-size: 42px
+		@media ( max-width: 375px )
+			font-size: 30px
+	&_preparat
+		font-family: $secondFont
+		font-size: 72px
+		line-height: 120%
+		letter-spacing: -0.03em
+		background: $preparatLeftTitleColor
+		background-clip: text!important
+		-webkit-text-fill-color: transparent
+		@media ( max-width: 1350px )
+			font-size: 60px
+		&_right
+			background: $preparatRightTitleColor
+	&_specialists
+		width: 85%
+		font-size: 32px
+		text-transform: none
+		@media ( max-width: 991px )
+			width: 100%
+			text-align: left
+		@media ( max-width: 576px )
+			font-size: 26px
+		@media ( max-width: 480px )
+			font-size: 24px
+		@media ( max-width: 425px )
+			font-size: 20px
+		@media ( max-width: 375px )
+			font-size: 16px
+	&_research
+		&_pipline
+			font-size: 32px
+			line-height: 120%
+			@media ( max-width: 991px )
+				text-align: left
+			@media ( max-width: 480px )
+				font-size: 26px
+			@media ( max-width: 425px )
+				font-size: 24px
+			@media ( max-width: 375px )
+				display: none
+	&_research-page_promo
+		color: $companyColor
+		@media ( max-width: 991px )
+			text-align: left
+			font-size: 46px
+		@media ( max-width: 676px )
+			font-size: 32px
+		@media ( max-width: 480px )
+			font-size: 26px
+		@media ( max-width: 425px )
+			font-size: 24px
+		@media ( max-width: 375px )
+			font-size: 22px
+	&_research-page_phase
+		@media ( max-width: 375px )
+			text-align: left
+	&_research-page-details
+		font-size: 32px
+		line-height: 120%
+		color: $companyColor
+		@media ( max-width: 991px )
+			text-align: left
+			width: 65%
+		@media ( max-width: 768px )
+			width: 70%
+		@media ( max-width: 676px )
+			font-size: 28px
+		@media ( max-width: 576px )
+			width: 75%
+			font-size: 26px
+		@media ( max-width: 480px )
+			width: 80%
+			font-size: 24px
+		@media ( max-width: 425px )
+			font-size: 22px
+		@media ( max-width: 375px )
+			font-size: 18px
+	&_research-details
+		font-size: 32px
+		line-height: 120%
+		text-transform: uppercase
+	&_lovercase
+		text-transform: none
+	&_research-page, &_research-page_how-work, &_news
+		@media ( max-width: 375px )
+			display: none
+	&_news-details
+		font-size: 32px
+		line-height: 120%
+		@media ( max-width: 991px )
+			text-align: left
+		@media ( max-width: 480px )
+			font-size: 28px
+		@media ( max-width: 425px )
+			font-size: 22px
+		@media ( max-width: 375px )
+			font-size: 18px
+	&_modal
+		font-size: 32px
+		line-height: 120%
+		@media ( max-width: 991px )
+			text-align: left
+		@media ( max-width: 480px )
+			font-size: 32px
+		@media ( max-width: 425px )
+			font-size: 26px
+		@media ( max-width: 375px )
+			font-size: 24px
+	&_research-page-details_modal
+		color: $companyColor
+		@media ( max-width: 375px )
+			font-size: 18px

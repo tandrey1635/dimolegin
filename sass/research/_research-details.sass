@@ -1,0 +1,83 @@
+@use '../base/index' as *
+
+.research-details
+	padding-top: 80px
+	@media ( max-width: 991px )
+		padding-top: 64px
+	@media ( max-width: 576px )
+		padding-top: 32px
+	&__block_more-detais
+		margin-top: 44px
+		@media (max-width: 425px)
+			margin-top: 32px
+		h1, h2, h3
+			margin-top: 40px
+			font-weight: 700
+			text-transform: uppercase
+			font-size: 32px
+			line-height: 120%
+			@media ( max-width: 768px )
+				font-size: 36px
+			@media ( max-width: 676px )
+				font-size: 32px
+			@media ( max-width: 576px )
+				font-size: 26px
+			@media ( max-width: 425px )
+				margin-top: 32px
+				font-size: 22px
+			@media ( max-width: 375px )
+				font-size: 18px
+				margin-top: 16px
+			br
+				@media ( max-width: 1250px )
+					display: none
+		h4, p, span, ul, ol
+			margin-top: 40px
+			font-size: 24px
+			line-height: 140%
+			@media ( max-width: 480px )
+				font-size: 22px
+			@media ( max-width: 425px )
+				font-size: 18px
+				margin-top: 32px
+			@media ( max-width: 375px )
+				margin-top: 16px
+		h4
+			font-weight: 400
+			margin-top: 0
+		span
+			display: block
+			font-weight: 700
+		ul, ol
+			list-style: disc
+			margin-left: 40px
+		ol
+			list-style: decimal
+		li > ul
+			margin-top: 0
+			margin-left: 25px
+			list-style: lower-alpha
+	&__info
+		width: 95%
+		margin: 40px auto 0
+		padding: 24px 52px
+		@include flexCenter
+		font-size: 24px
+		line-height: 140%
+		text-align: center
+		color: $companyColor
+		border-radius: 40px
+		min-height: 92px
+		background: $mainBg
+		box-shadow: 10px 10px 20px 0 $mainShadow
+		@media ( max-width: 576px )
+			padding: 24px
+		@media ( max-width: 480px )
+			font-size: 22px
+			padding: 20px
+		@media ( max-width: 425px )
+			font-size: 18px
+			padding: 16px
+		@media ( max-width: 375px )
+			margin-top: 16px
+			font-size: 16px

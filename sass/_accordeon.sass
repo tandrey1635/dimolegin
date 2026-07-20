@@ -1,0 +1,48 @@
+@use 'base/index' as *
+
+.accordeon
+	width: 100%
+	margin: 0 auto
+	&__wrapper
+		margin-top: 20px
+		@include flexReverseAxios
+		gap: 32px
+	&__item
+		cursor: pointer
+	&__description
+		display: none
+		margin-top: 56px
+	&__header
+		position: relative
+		color: $secondColor
+		text-transform: uppercase
+		font-size: 32px
+		@media ( max-width: 576px )
+			font-size: 26px
+		@media ( max-width: 480px )
+			font-size: 24px
+		@media ( max-width: 425px )
+			font-size: 20px
+		@media ( max-width: 375px )
+			font-size: 18px
+		&::after
+			width: 30px
+			height: 30px
+			@include after
+			@include background('icons/accordeon-arrow-mobile.svg', contain)
+			@media ( max-width: 425px )
+				width: 20px
+				height: 20px
+	&__text
+		color: $secondColor
+.accordeon-active
+	display: block
+.accordeon-active-icon
+	&::after
+		width: 30px
+		height: 30px
+		@include after
+		transform: rotate(180deg)
+		@media ( max-width: 425px )
+			width: 20px
+			height: 20px
