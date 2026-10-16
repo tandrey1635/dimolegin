@@ -5491,11 +5491,6 @@ address {
   margin-top: 36px;
   margin-top: 42px;
 }
-@media (max-width: 425px) {
-  .news-details p, .news-details a {
-    gap: 28px;
-  }
-}
 @media (max-width: 991px) {
   .news-details p, .news-details a {
     font-size: 22px;
@@ -5511,6 +5506,7 @@ address {
   .news-details p, .news-details a {
     font-size: 18px;
     margin-top: 28px;
+    gap: 28px;
   }
 }
 @media (max-width: 375px) {
